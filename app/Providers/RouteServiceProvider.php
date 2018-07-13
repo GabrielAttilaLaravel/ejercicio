@@ -23,7 +23,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // creamos un macro aceptando como parametro una accion
+        Route::macro('catch', function ($action){
+            // aceptamos cualquier cosa
+            $this->any('{anything}', $action)
+                ->where('anything', '.*')
+                ->fallback(); // Si colocamos fallback no importara en que parte coloquemos la macro en la admin.php
+        });
 
         parent::boot();
     }
@@ -39,7 +45,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        $this->mapAdminRoutes();
     }
 
     /**
@@ -69,5 +75,23 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection,
+     * require authentication and an admin user, etc.
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        // autenticamos el codigo dentro e las rutas del admin con el guard "Admin" configurado en "config.auth"
+        // ya que por defecto esta para la clase User y no para la clace Admin que creamos.
+        Route::middleware(['web', 'auth', 'admin'])
+            ->namespace($this->namespace . '\Admin')
+            ->prefix('/admin')
+            ->group(base_path('routes/Admin/admin.php'));
     }
 }

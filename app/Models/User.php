@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,8 +27,25 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function perfil()
+    {
+        return $this->hasOne(Perfil::class);
+    }
+
+    public function isAdmin()
+    {
+        return $this->role->nombreR === 'admin';
+    }
+
     public function getFullNameAttribute()
     {
         return $this->first_name .' '. $this->last_name;
     }
+
+
 }

@@ -47,7 +47,7 @@ class LoginController extends Controller
 
         if (Auth::attempt([$field => $request->login , 'password' => $request->password]))
         {
-            return redirect('/panel');
+            return redirect(route(auth()->user()->isAdmin() ? 'admin_dashboard' : '/user'));
         }
     }
 }

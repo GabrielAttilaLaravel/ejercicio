@@ -24,7 +24,7 @@
     <!-- Styles -->
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @yield('css')
+    {{ $css or ''}}
 </head>
 <body class="bg-dark">
     <div id="app">
@@ -33,7 +33,7 @@
         @endif
 
         <main class="py-4">
-            @yield('content')
+            {{ $content }}
         </main>
     </div>
 
@@ -42,6 +42,6 @@
     <script src="{{ asset('js/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
     <!-- Core plugin JavaScript-->
     <script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}" defer></script>
-    @yield('scripts')
+    {{ $scripts or ''}}
 </body>
 </html>

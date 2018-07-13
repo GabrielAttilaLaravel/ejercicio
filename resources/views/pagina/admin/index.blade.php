@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@component('layouts.app')
 
-@section('content')
-    <div class="container">
-        index
-    </div>
-@endsection
+    @slot('content')
+        <div class="container">
+            Panel de Administración
+        </div>
+    @endslot
+@endcomponent
