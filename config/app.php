@@ -150,7 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Styde\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
