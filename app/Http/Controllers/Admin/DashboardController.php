@@ -7,10 +7,10 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-    protected $view = 'pagina.admin.index';
+    protected $role = 'admin';
 
     public function index()
     {
-        return view($this->view);
+        return view('pagina.panelAdmin.index');
     }
 }

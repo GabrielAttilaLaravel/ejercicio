@@ -1,4 +1,4 @@
-@component('layouts.app')
+@component('layouts.panelAdmin')
 
     @slot('content')
         <div class="container">

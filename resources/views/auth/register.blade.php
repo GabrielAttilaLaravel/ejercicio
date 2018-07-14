@@ -1,77 +1,47 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
+@component('layouts.panelAdmin')
+    @slot('content')
+        <div class="container">
+            <div class="card card-register mx-auto mt-5">
+                <div class="card-header">Register an Account</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
-                        @csrf
+                    {!! Form::open(['route' => 'register', 'method'=> 'POST']) !!}
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <label for="username">User name</label>
+                        {!! Field::text('username', null, ['placeholder' => 'Enter username']) !!}
 
+                        <div class="form-row">
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                <label for="first_name">First name</label>
+                                {!! Field::text('first_name', null, ['placeholder' => 'Enter first name']) !!}
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                <label for="last_name">Last name</label>
+                                {!! Field::text('last_name', null, ['placeholder' => 'Enter last name']) !!}
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <label for="login">Email address</label>
+                        {!! Field::email('email', null, ['placeholder' => 'Enter email']) !!}
 
+                        <div class="form-row">
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                                <label for="password">Password</label>
+                                {!! Field::password('password', ['placeholder' => 'Enter password']) !!}
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <label for="password">Confirm password</label>
+                                {!! Field::password('password_confirmation', ['placeholder' => 'Enter Confirm password']) !!}
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        {!! Form::submit('Register', ['class' => 'btn btn-primary btn-block']) !!}
+                    {!! Form::close() !!}
+                    <div class="text-center">
+                        <a class="d-block small mt-3" href="{{ route('login') }}">Login Page</a>
+                        <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endsection
+    @endslot
+@endcomponent

@@ -46,6 +46,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
 
         $this->mapAdminRoutes();
+
+        $this->mapUserRoutes();
     }
 
     /**
@@ -93,5 +95,15 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace . '\Admin')
             ->prefix('/admin')
             ->group(base_path('routes/Admin/admin.php'));
+    }
+
+    protected function mapUserRoutes()
+    {
+        // autenticamos el codigo dentro e las rutas del admin con el guard "Admin" configurado en "config.auth"
+        // ya que por defecto esta para la clase User y no para la clace Admin que creamos.
+        Route::middleware(['web', 'auth'])
+            ->namespace($this->namespace . '\User')
+            ->prefix('/user')
+            ->group(base_path('routes/User/user.php'));
     }
 }

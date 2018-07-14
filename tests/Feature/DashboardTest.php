@@ -35,7 +35,7 @@ class DashboardTest extends TestCase
     {
         // nos vamos a la ruta admin_dashboard
         $this->get(route('admin_dashboard'))
-            // como no estamos logeados no redirigira
+            // como no estamos logeados nos redirigira
             ->assertStatus(302)
             // deberiamos ver la pagina de login
             ->assertRedirect('login');
