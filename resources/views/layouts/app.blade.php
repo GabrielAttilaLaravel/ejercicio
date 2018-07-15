@@ -27,9 +27,7 @@
 <body>
     <div id="app">
         @include('layouts.partials.nav')
-
         <main class="py-4">
-
             {{ $content }}
         </main>
     </div>

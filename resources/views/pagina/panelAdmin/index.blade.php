@@ -1,8 +1,13 @@
 @component('layouts.panelAdmin')
 
     @slot('content')
-        <div class="container">
-            Panel de Administración
+        <!-- side menu -->
+        <div class="col-md-2">
+            <h1>Navigation</h1>
+        </div>
+        <!-- main content area -->
+        <div class="col-md-10">
+            <p>This is content area for admin</p>
         </div>
     @endslot
 
