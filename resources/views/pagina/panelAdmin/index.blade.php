@@ -5,4 +5,10 @@
             Panel de Administración
         </div>
     @endslot
+
+    @slot('scripts')
+        <script>
+            $("body").removeClass("bg-dark");
+        </script>
+    @endslot
 @endcomponent

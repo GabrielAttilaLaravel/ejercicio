@@ -22,14 +22,14 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {{ $css or ''}}
 </head>
 <body class="bg-dark">
     <div id="app">
-        @if( ! in_array(Request::path(), ['login', 'register']))
+        @if( ! ROUTE::is(['login','register', 'password.reset', 'password.request']))
             @include('layouts.partials.nav')
         @endif
 
