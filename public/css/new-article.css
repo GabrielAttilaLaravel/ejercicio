@@ -1,0 +1,20 @@
+.form-wrapper {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.note-editable {
+    background-color: #fff;
+}
+
+.note-popover {
+    display: none;
+}
+
+.select2 {
+    width: 100%!important;
+}
+
+.form-check {
+    display: inline-block;
+}

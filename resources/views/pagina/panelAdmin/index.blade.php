@@ -4,6 +4,10 @@
         {{ $title or 'Panel Admin'}}
     @endslot
 
+    @slot('css')
+        {{ $css or ''}}
+    @endslot
+
     @slot('content')
         <div class="col-2 d-none d-sm-block display-table-cell collapse" id="side-menu">
             @include('pagina.panelAdmin.partials.site-menu')
@@ -14,4 +18,7 @@
         </div>
     @endslot
 
+    @slot('scripts')
+        {{ $scripts or ''}}
+    @endslot
 @endcomponent

@@ -38,5 +38,6 @@
     {!! Html::script('js/panelAdmin/default.js') !!}
     <!-- Optional JavaScript -->
     {{ $scripts or ''}}
+
 </body>
 </html>
