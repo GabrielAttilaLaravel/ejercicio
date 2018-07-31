@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\PanelAdmin\DashboardController as Controller;
 
 
-class DashboardController extends AdminDashboardController
+class DashboardController extends Controller
 {
-    protected $role = 'user';
+
 }

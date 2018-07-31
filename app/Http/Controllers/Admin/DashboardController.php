@@ -2,15 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\PanelAdmin\DashboardController as PanelAdminController;
 
-class DashboardController extends Controller
+class DashboardController extends PanelAdminController
 {
-    protected $role = 'admin';
-
-    public function index()
-    {
-        return view('pagina.panelAdmin.index');
-    }
+    
 }

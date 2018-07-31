@@ -1,21 +1,21 @@
 <!-- side menu -->
 <h1 class="d-none d-lg-block">Navigation</h1>
 <ul>
-    <li class="link active">
-        <a href="#">
+    <li class="link @if(ROUTE::is('admin_dashboard')) active @endif">
+        <a href="{{ route('admin_dashboard') }}">
             <i class="fas fa-th" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Dashboard</span>
         </a>
     </li>
-    <li class="link">
+    <li class="link @if(ROUTE::is('article_create')) active @endif">
         <a href="#collapse-post"  data-toggle="collapse" aria-controls="collapse-post">
             <i class="fas fa-list-alt" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Article</span>
             <span class="badge badge-success float-right d-none d-lg-inline">20</span>
         </a>
         <ul class="collapse collapseable" id="collapse-post">
-            <li><a href="#">Create New</a></li>
-            <li><a href="#">View Article</a></li>
+            <li><a href="{{ route('article_create') }}">Create New</a></li>
+            <li><a href="">View Article</a></li>
         </ul>
     </li>
 

@@ -4,6 +4,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 Route::get('/', 'DashboardController@index')->name('admin_dashboard');
 
+require __DIR__ . '/Article/article.php';
+
 // validamos con una macro para que cuando un usaurio intente ingresar una url invalida nos arroje
 // un error 404 (codigo en RouteServiceProvider)
 Route::catch(function (){

@@ -24,16 +24,10 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {{ $css or ''}}
 </head>
-<body class="bg-dark">
+<body>
     <div class="container-fluid display-table">
         <div class="row m-0 display-table-row content">
-            <div class="col-2 d-none d-sm-block display-table-cell collapse" id="side-menu">
-                @include('pagina.panelAdmin.partials.site-menu')
-            </div>
-            <div class="col-10 display-table-cell" id="main-content">
-                @include('pagina.panelAdmin.partials.main-content')
-                {{ $content }}
-            </div>
+            {{ $content }}
         </div>
     </div>
 
@@ -41,6 +35,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    {!! Html::script('js/panelAdmin/default.js') !!}
     <!-- Optional JavaScript -->
     {{ $scripts or ''}}
 </body>
