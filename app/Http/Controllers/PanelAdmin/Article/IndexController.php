@@ -5,10 +5,10 @@ namespace App\Http\Controllers\PanelAdmin\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CreateController extends Controller
+class IndexController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return view('pagina.panelAdmin.article.create');
+        return view('pagina.panelAdmin.article.index');
     }
 }

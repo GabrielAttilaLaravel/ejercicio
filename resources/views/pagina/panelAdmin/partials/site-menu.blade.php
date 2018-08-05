@@ -14,8 +14,8 @@
             <span class="badge badge-success float-right d-none d-lg-inline">20</span>
         </a>
         <ul class="collapse collapseable" id="collapse-post">
-            <li><a href="{{ route('article_create') }}">Create New</a></li>
-            <li><a href="">View Article</a></li>
+            <li><a href="{{ route($admin.'article_create') }}">Create New</a></li>
+            <li><a href="{{ route($admin.'article_index') }}">View Article</a></li>
         </ul>
     </li>
 

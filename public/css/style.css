@@ -213,12 +213,35 @@ html, body{
     font-weight: bold;
     padding: 0px 0px 0px 20px;
     margin: 0px;
+    display: inline-block;
 }
-
+.btn-create {
+    font-size: 14px;
+    padding: 2px 10px;
+    margin-right: 20px;
+}
 .content-inner {
     padding: 20px;
 }
 
+.actions {
+    width: 100%;
+}
+
+.actions a {
+    padding: 0px 12px;
+}
+
+.btn-default {
+    color: #676a6c;
+    border: 1px #eee solid;
+}
+
+.btn-default:hover {
+    background-color: #f3f3f4;
+    color: #676a6c;
+    border: 1px #eee solid;
+}
 
 /* Admin Footer */
 #admin-footer {
@@ -244,4 +267,19 @@ html, body{
 
 .card-register {
     max-width: 40rem;
+}
+
+/* Form */
+.select2 {
+    width: 100%!important;
+}
+
+
+/* Campo select del form */
+.select2-search__field {
+    width: 100%!important;
+}
+
+.form-check {
+    display: inline-block;
 }
