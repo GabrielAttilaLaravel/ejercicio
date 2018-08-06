@@ -44,7 +44,7 @@
                                 <td>php</td>
                                 <td><span class="badge badge-success">in use</span></td>
                                 <td class="d-none d-sm-block" >2 days ago</td>
-                                <td>
+                                <td class="actions-color">
                                     <button type="button" class="btn btn-xs btn-warning">edit</button>
                                     <button type="button" class="btn btn-xs btn-danger disabled">delete</button>
                                 </td>
@@ -54,7 +54,7 @@
                                 <td>laravel</td>
                                 <td><span class="badge badge-dark">not used</span></td>
                                 <td class="d-none d-sm-block">4 days ago</td>
-                                <td>
+                                <td class="actions-color">
                                     <button type="button" class="btn btn-xs btn-warning">edit</button>
                                     <button type="button" class="btn btn-xs btn-danger">delete</button>
                                 </td>

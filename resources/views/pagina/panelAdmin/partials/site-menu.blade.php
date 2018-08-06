@@ -41,10 +41,10 @@
         </ul>
     </li>
 
-    <li class="link">
-        <a href="#">
+    <li class="link @if(ROUTE::is(['admin_users_index'])) active @endif">
+        <a href="{{ route('admin_users_index') }}">
             <i class="fas fa-user" aria-hidden="true"></i>
-            <span class="d-none d-lg-inline">Commenters</span>
+            <span class="d-none d-lg-inline">Users</span>
             <span class="badge badge-success float-right d-none d-lg-inline">20</span>
         </a>
     </li>

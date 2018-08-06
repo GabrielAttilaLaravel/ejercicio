@@ -366,3 +366,24 @@ html, body{
 .badge-dark {
     background-color: #676a6c;
 }
+
+.badge-warning {
+    color: #fff;
+    font-weight: bold;
+}
+
+table th{
+    border-top: none!important;
+}
+
+.table thead th {
+    border-bottom: none;
+}
+
+.actions-color button {
+    font-size: 75%;
+    padding: 3px 4.800px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
