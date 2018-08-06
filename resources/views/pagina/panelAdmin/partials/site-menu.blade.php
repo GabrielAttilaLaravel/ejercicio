@@ -55,7 +55,7 @@
         </a>
     </li>
     <li class="link settings-btn">
-        <a href="#">
+        <a href="{{ route('admin_settings') }}">
             <i class="fas fa-cog" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Settings</span>
         </a>

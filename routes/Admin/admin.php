@@ -3,6 +3,7 @@
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 Route::get('/', 'DashboardController@index')->name('admin_dashboard');
+Route::get('/settings', 'SettingsController@settings')->name('admin_settings');
 
 require __DIR__ . '/Article/article.php';
 require __DIR__ . '/Comments/comments.php';
