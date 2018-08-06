@@ -22,7 +22,7 @@
         </ul>
     </li>
 
-    <li class="link @if(ROUTE::is('admin_comments_approved')) active @endif">
+    <li class="link @if(ROUTE::is(['admin_comments_approved', 'admin_comments_unapproved'])) active @endif">
         <a href="#collapse-comments"  data-toggle="collapse" aria-controls="collapse-comments">
             <i class="fas fa-pencil-alt" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Comments</span>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">Unapproved
+                <a href="{{ route('admin_comments_unapproved') }}">Unapproved
                     <span class="badge badge-warning float-right d-none d-lg-inline">10</span>
                 </a>
             </li>
