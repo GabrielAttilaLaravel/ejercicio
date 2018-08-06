@@ -6,6 +6,7 @@ Route::get('/', 'DashboardController@index')->name('admin_dashboard');
 
 require __DIR__ . '/Article/article.php';
 require __DIR__ . '/Comments/comments.php';
+require __DIR__ . '/Tags/tags.php';
 
 // validamos con una macro para que cuando un usaurio intente ingresar una url invalida nos arroje
 // un error 404 (codigo en RouteServiceProvider)

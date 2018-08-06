@@ -48,8 +48,8 @@
             <span class="badge badge-success float-right d-none d-lg-inline">20</span>
         </a>
     </li>
-    <li class="link">
-        <a href="#">
+    <li class="link @if(ROUTE::is(['admin_tags_index'])) active @endif">
+        <a href="{{ route('admin_tags_index') }}">
             <i class="fas fa-tags" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Tags</span>
         </a>
