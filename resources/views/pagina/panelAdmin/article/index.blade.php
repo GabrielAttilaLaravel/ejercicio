@@ -17,16 +17,7 @@
             @endcomponent
 
             <div class="content-inner">
-                <div class="row search-row">
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <input id="search" placeholder="Search" class="form-control search-field" name="go" type="text">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-primary go">Go!</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                @include('pagina.panelAdmin.partials.search')
                 <div class="row container-fluid">
                     <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1 status-padding">
                         <span class="badge badge-success badge-sm">Active</span>
