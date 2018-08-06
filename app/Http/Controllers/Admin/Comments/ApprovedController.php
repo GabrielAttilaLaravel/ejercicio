@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class ApprovedController extends Controller
 {
-    public function index()
+    public function approved()
     {
         return view('pagina.panelAdmin.comments.approved');
     }

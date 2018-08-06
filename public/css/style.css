@@ -283,3 +283,82 @@ html, body{
 .form-check {
     display: inline-block;
 }
+
+/* search, titulo y boton primary del contenedor del cuerpo */
+.btn-primary {
+    background-color: #1ab394;
+    border: 1px solid #1ab394;
+}
+
+.btn-primary:hover {
+    background-color: #1cc394;
+    border: 1px solid #1cc394;
+}
+
+.btn-primary:focus {
+    background-color: #1cc394;
+    border: 1px solid #1cc394;
+}
+
+.btn-primary:active {
+    background-color: #1cc394!important;
+    border: 1px solid #1cc394!important;
+}
+
+.search-row {
+    margin-bottom: 30px;
+}
+
+.search-field {
+    height: 31px;
+    border: 1px #e7eaec solid;
+}
+
+.go {
+    height: 31px;
+    padding-top: 3px;
+}
+
+.badge-success {
+    background-color: #1ab394;
+}
+
+.badge-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.badge-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.badge-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.pagination a {
+    color: #1ab394!important;
+}
+
+.pagination .active .page-link{
+    background-color: #1ab394!important;
+    color: #fff!important;
+    border-color: #1ab394;
+}
+
+.btn-default {
+    padding: 0 12px;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}

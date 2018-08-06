@@ -7,7 +7,10 @@
             <span class="d-none d-lg-inline">Dashboard</span>
         </a>
     </li>
-    <li class="link @if(ROUTE::is('article_create')) active @endif">
+    <li class="link @if(ROUTE::is([
+                        'admin_article_create', 'article_create',
+                        'admin_article_index', 'article_index',
+                    ])) active @endif">
         <a href="#collapse-post"  data-toggle="collapse" aria-controls="collapse-post">
             <i class="fas fa-list-alt" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Article</span>
@@ -19,14 +22,14 @@
         </ul>
     </li>
 
-    <li class="link">
+    <li class="link @if(ROUTE::is('admin_comments_approved')) active @endif">
         <a href="#collapse-comments"  data-toggle="collapse" aria-controls="collapse-comments">
             <i class="fas fa-pencil-alt" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Comments</span>
         </a>
         <ul class="collapse collapseable" id="collapse-comments">
             <li>
-                <a href="#">Approved
+                <a href="{{ route('admin_comments_approved') }}">Approved
                     <span class="badge badge-success float-right d-none d-lg-inline">10</span>
                 </a>
             </li>

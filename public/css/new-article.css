@@ -11,76 +11,6 @@
     display: none;
 }
 
-.search-field {
-    height: 31px;
-    border: 1px #e7eaec solid;
-}
-
-.btn-primary {
-    background-color: #1ab394;
-    border: 1px solid #1ab394;
-}
-
-.btn-primary:hover {
-    background-color: #1cc394;
-    border: 1px solid #1cc394;
-}
-
-.btn-primary:focus {
-    background-color: #1cc394;
-    border: 1px solid #1cc394;
-}
-
-.btn-primary:active {
-    background-color: #1cc394!important;
-    border: 1px solid #1cc394!important;
-}
-
-.go {
-    height: 31px;
-    padding-top: 3px;
-}
-
-.badge-success {
-    background-color: #1ab394;
-}
-
-.badge-lg {
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 6px;
-}
-
-.badge-sm {
-    padding: 5px 10px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-}
-
-.badge-xs {
-    padding: 1px 5px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-}
-
-.pagination a {
-    color: #1ab394!important;
-}
-
-.pagination .active .page-link{
-    background-color: #1ab394!important;
-    color: #fff!important;
-    border-color: #1ab394;
-}
-
-.container-fluid {
-    padding: 0px;
-    margin: 0px;
-}
-
 .content-inner .container-fluid div:last-child{
     padding-right: 0px !important;
 }
@@ -180,9 +110,7 @@
     color: #bbb;
 }
 
-.search-row {
-    margin-bottom: 30px;
-}
+
 
 /* boton para publicar article */
 @media (max-width: 540px) {
