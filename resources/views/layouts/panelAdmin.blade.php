@@ -38,6 +38,10 @@
     {!! Html::script('js/panelAdmin/default.js') !!}
     <!-- Optional JavaScript -->
     {{ $scripts or ''}}
-
+    <script>
+        $(".navbar-default").click(function() {
+            $(this).remove();
+        });
+    </script>
 </body>
 </html>

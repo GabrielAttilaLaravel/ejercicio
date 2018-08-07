@@ -37,7 +37,7 @@
                             <td class="actions-color">
                                 <button type="button" class="btn btn-xs btn-primary">show</button>
                                 <button type="button" class="btn btn-xs btn-warning">edit</button>
-                                <button type="button" class="btn btn-xs btn-danger disabled">delete</button>
+                                <button type="button" class="btn btn-xs btn-danger">delete</button>
                             </td>
                         </tr>
 
