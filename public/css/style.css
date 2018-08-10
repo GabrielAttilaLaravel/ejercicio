@@ -38,11 +38,33 @@ html, body{
 #side-menu .fas{
     margin-right: 6px;
 }
-#side-menu a:hover{
+#side-menu li > a:hover{
     background-color: #293846;
     color: #fff;
     display: block;
 }
+
+#side-menu .content-perfil-image {
+    margin-bottom: 30px;
+}
+
+#side-menu .perfil-image {
+    padding-top: 30px;
+
+}
+
+#side-menu .perfil-image img {
+    border: 10px solid white;
+    box-shadow: 0 0 40px black;
+    width: 150px;
+    height: 150px;
+}
+
+.content-perfil-image a {
+    color: white!important;
+    font-weight: bold;
+}
+
 #side-menu .active a{
     color: #fff;
     background-color: #293846;
@@ -188,6 +210,22 @@ html, body{
 @media (min-width: 276px) and (max-width: 990px) {
     #side-menu {
         max-width: 55px;
+    }
+
+    #side-menu .perfil-image {
+        padding-top: 5px;
+    }
+
+    #side-menu .perfil-image img{
+        width: 50px;
+        height: 50px;
+        border: 2px;
+        margin: 0px;
+        border: 3px solid white;
+    }
+
+    .content-perfil-image > a, .content-perfil-image .row {
+        display: none!important;
     }
 
     .collapseable {

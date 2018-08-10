@@ -1,5 +1,16 @@
 <!-- side menu -->
-<h1 class="d-none d-lg-block">Navigation</h1>
+<div class="content-perfil-image">
+    <div class="perfil-image ">
+        <img class="rounded-circle d-none d-sm-block mx-auto d-block" src="{{ asset('img/familia.jpg') }}" alt="">
+    </div>
+    <a href="{{ route('admin_dashboard') }}" class="text-center">
+        <span>Gabriel Moreno</span>
+    </a>
+    <div class="row m-0 justify-content-md-center">
+        <div class="role col-md-auto">Admin</div>
+    </div>
+</div>
+
 <ul>
     <li class="link @if(ROUTE::is('admin_dashboard')) active @endif">
         <a href="{{ route('admin_dashboard') }}">
@@ -7,6 +18,13 @@
             <span class="d-none d-lg-inline">Dashboard</span>
         </a>
     </li>
+    <li class="link @if(ROUTE::is(['user_perfil'])) active @endif">
+        <a href="{{ route($admin.'user_perfil_edit', auth()->user()) }}">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span class="d-none d-lg-inline">Perfil</span>
+        </a>
+    </li>
+
     <li class="link @if(ROUTE::is([
                         'admin_article_create', 'article_create',
                         'admin_article_index', 'article_index',
@@ -43,7 +61,7 @@
 
     <li class="link @if(ROUTE::is(['admin_users_index'])) active @endif">
         <a href="{{ route('admin_users_index') }}">
-            <i class="fas fa-user" aria-hidden="true"></i>
+            <i class="fas fa-users" aria-hidden="true"></i>
             <span class="d-none d-lg-inline">Users</span>
             <span class="badge badge-success float-right d-none d-lg-inline">20</span>
         </a>

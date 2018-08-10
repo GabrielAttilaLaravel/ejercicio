@@ -12,7 +12,10 @@
                 @slot('title', 'All users')
 
                 @slot('button_create')
-                    <button type="button" class="btn-create btn btn-xs btn-primary float-right">Create new article</button>
+                    @include('pagina.panelAdmin.partials.button_create', [
+                         'route' => 'admin_article_create',
+                         'value' => 'Create new article'
+                     ])
                 @endslot
             @endcomponent
 

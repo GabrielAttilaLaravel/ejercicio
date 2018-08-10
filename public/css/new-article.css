@@ -1,7 +1,4 @@
-.form-wrapper {
-    background-color: #eee;
-    padding: 20px;
-}
+@import url('partials/forms.css');
 
 .note-editable {
     background-color: #fff;
@@ -112,10 +109,3 @@
 
 
 
-/* boton para publicar article */
-@media (max-width: 540px) {
-    .submit{
-        float: none;
-        width: 100%;
-    }
-}

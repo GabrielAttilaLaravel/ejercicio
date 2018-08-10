@@ -44,4 +44,7 @@
             </div>
         </div>
     @endslot
+    @slot('scripts')
+        {!! Html::script('js/auth/default.js') !!}
+    @endslot
 @endcomponent
