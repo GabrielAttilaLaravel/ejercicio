@@ -4319,6 +4319,10 @@ input[type="button"].btn-block {
   content: "Browse";
 }
 
+.custom-file-input:lang(es) ~ .custom-file-label::after {
+  content: "Elegir";
+}
+
 .custom-file-label {
   position: absolute;
   top: 0;
