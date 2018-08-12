@@ -1,0 +1,13 @@
+.form-wrapper{
+  background-color: #eeeeee;
+  padding: 20px;
+}
+
+
+/* boton para publicar article */
+@media (max-width: 540px) {
+  .submit {
+      float: none;
+      width: 100%;
+  }
+}
