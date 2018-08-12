@@ -19,9 +19,10 @@
                         </div>
                         {!! Form::open(['route' => 'login', 'method'=> 'POST']) !!}
                             <div class="custom-file">
-                                {!! Field::file('file',['lang' => 'es', 'class'=>'custom-file-input','id'=>'customFileLang']) !!}
-                                <label class="custom-file-label" for="customFileLang">
-                                    Select file</label>
+                                {!! Field::file('file',['lang' => 'es', 'class'=>'custom-file-input','id'=>'validatedCustomFile', 'required' => true]) !!}
+                                <label class="custom-file-label" for="validatedCustomFile">
+                                    Select file
+                                </label>
                             </div>
                             {!! Field::text('usermane', null, ['placeholder' => 'Username']) !!}
 

@@ -11,6 +11,11 @@
       width: 100%;
   }
 }
+.custom-file-label::after {
+  background-color: #1ab394;
+  color: white;
+}
+
 .custom-file {
   margin-bottom: 1rem;
 }
