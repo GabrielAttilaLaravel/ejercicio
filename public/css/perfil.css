@@ -1,16 +1,17 @@
-.form-wrapper{
-  background-color: #eeeeee;
+.form-wrapper {
+  background-color: #eee;
   padding: 20px;
 }
 
-
 /* boton para publicar article */
+
 @media (max-width: 540px) {
   .submit {
-      float: none;
-      width: 100%;
+    float: none;
+    width: 100%;
   }
 }
+
 .custom-file-label::after {
   background-color: #1ab394;
   color: white;

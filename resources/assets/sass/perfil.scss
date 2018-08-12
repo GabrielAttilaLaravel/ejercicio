@@ -2,12 +2,11 @@
 // Variables
 @import "variables";
 
-@import url("partials/forms.scss");
-
-@import url('partials/forms.scss');
+// Estilo de los formularios
+@import "partials/forms.scss";
 
 .custom-file-label::after {
-  background-color: #1ab394;
+  background-color: $color-btn-primary;
   color: white;
 }
 .custom-file {
