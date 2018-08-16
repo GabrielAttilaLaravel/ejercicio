@@ -10,6 +10,13 @@
         <div id="content">
             @component('pagina.panelAdmin.partials.header')
                 @slot('title', 'Perfil')
+
+                @slot('button_create')
+                    @include('pagina.panelAdmin.partials.button_create', [
+                         'route' => currentRole().'user_company_create',
+                         'value' => 'Register your company'
+                     ])
+                @endslot
             @endcomponent
             <div class="content-inner">
                 <div class="card">
