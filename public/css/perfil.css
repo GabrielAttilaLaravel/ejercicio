@@ -12,6 +12,26 @@
   }
 }
 
+.select2-selection--single {
+  height: 36px !important;
+  border: 1px solid #ced4da !important;
+}
+
+.select2-selection__rendered,
+.select2-selection__placeholder,
+.custom-file-label {
+  color: #6f6b6b !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-top: 4px;
+}
+
+.select2-arrow,
+.select2-chosen {
+  padding-top: 6px;
+}
+
 .custom-file-label::after {
   background-color: #1ab394;
   color: white;
