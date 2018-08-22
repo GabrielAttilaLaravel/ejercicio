@@ -13,7 +13,7 @@
 
                 @slot('button_create')
                     @include('pagina.panelAdmin.partials.button_create', [
-                         'route' => currentRole().'user_company_create',
+                         'route' => adminRoute().'company_create',
                          'value' => 'Register your company'
                      ])
                 @endslot

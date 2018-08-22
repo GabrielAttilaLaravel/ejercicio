@@ -1,5 +1,5 @@
 .form-wrapper{
-  background-color: #eee;
+  background-color: $color-backg-form;
   padding: 20px;
 }
 
@@ -9,4 +9,21 @@
       float: none;
       width: 100%;
   }
+}
+
+.select2-selection--single{
+  height: 36px!important;
+  border: 1px solid $border-color-select2!important;
+}
+
+.select2-selection__rendered, .select2-selection__placeholder, .custom-file-label {
+  color: $color-select2 !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+  padding-top: 4px;
+}
+
+.select2-arrow, .select2-chosen {
+  padding-top: 6px;
 }

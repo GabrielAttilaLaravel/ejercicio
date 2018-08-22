@@ -59,6 +59,17 @@
         </ul>
     </li>
 
+    <li class="link @if(ROUTE::is(['admin_comments_approved', 'admin_comments_unapproved'])) active @endif">
+        <a href="#collapse-company"  data-toggle="collapse" aria-controls="collapse-company">
+            <i class="fas fa-building" aria-hidden="true"></i>
+            <span class="d-none d-lg-inline">Company</span>
+        </a>
+        <ul class="collapse collapseable" id="collapse-company">
+            <li><a href="{{ route($admin.'company_create') }}">Create New</a></li>
+            <li><a href="{{ route($admin.'article_index') }}">View Article</a></li>
+        </ul>
+    </li>
+
     <li class="link @if(ROUTE::is(['admin_users_index'])) active @endif">
         <a href="{{ route('admin_users_index') }}">
             <i class="fas fa-users" aria-hidden="true"></i>
