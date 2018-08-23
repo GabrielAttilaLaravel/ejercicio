@@ -3,7 +3,7 @@
     @slot('title', 'Company')
 
     @slot('css')
-        {!! Html::style('css/perfil.css') !!}
+        {!! Html::style('css/company.css') !!}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     @endslot
 
@@ -20,7 +20,7 @@
                         </div>
                         {!! Form::open(['route' => 'login', 'method'=> 'POST']) !!}
                         <div class="custom-file">
-                            {!! Field::file('file',['lang' => 'es', 'class'=>'custom-file-input','id'=>'validatedCustomFile', 'required' => true]) !!}
+                            {!! Field::file('file',['class'=>'custom-file-input','id'=>'validatedCustomFile', 'required' => true]) !!}
                             <label class="custom-file-label" for="validatedCustomFile">
                                 Select an image
                             </label>
@@ -49,31 +49,13 @@
     @endslot
 
     @slot('scripts')
+        {!! Html::script('js/show-img-input-file.js') !!}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('.chosen-select').select2({
-                    placeholder: "Select category"
-                });
+            $('.chosen-select').select2({
+                placeholder: "Select category"
             });
-
-            /* Cargar imagen en img al cargarla en input file*/
-            function init() {
-                var inputFile = document.getElementById('validatedCustomFile');
-                inputFile.addEventListener('change', mostrarImagen, false);
-            }
-
-            function mostrarImagen(event) {
-                var file = event.target.files[0];
-                var reader = new FileReader();
-                reader.onload = function(event) {
-                    var img = document.getElementById('img1');
-                    img.src= event.target.result;
-                }
-                reader.readAsDataURL(file);
-            }
-
-            window.addEventListener('load', init, false);
         </script>
+
     @endslot
 @endcomponent

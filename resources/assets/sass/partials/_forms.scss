@@ -27,3 +27,22 @@
 .select2-arrow, .select2-chosen {
   padding-top: 6px;
 }
+
+.custom-file-label::after {
+  background-color: $color-btn-primary;
+  color: white;
+}
+.custom-file {
+  margin-bottom: 1rem;
+}
+
+.perfil-image {
+  margin-bottom: 20px;
+}
+
+.perfil-image img {
+  height: 150px;
+  width: 150px;
+  border: 10px solid white;
+  box-shadow: 0 0 20px black;
+}

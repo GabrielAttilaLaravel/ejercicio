@@ -10,6 +10,6 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix //js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/perfil.scss', 'public/css');
+mix.js('resources/assets/js/show-img-input-file.js', 'public/js')
+    .sass('resources/assets/sass/perfil.scss', 'public/css')
+    .sass('resources/assets/sass/company.scss', 'public/css');
