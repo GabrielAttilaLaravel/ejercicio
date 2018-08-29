@@ -11,5 +11,6 @@ let mix = require('laravel-mix');
  |
  */
 mix.js('resources/assets/js/show-img-input-file.js', 'public/js')
+    .js('resources/assets/js/googlemaps.js', 'public/js')
     .sass('resources/assets/sass/perfil.scss', 'public/css')
     .sass('resources/assets/sass/company.scss', 'public/css');
