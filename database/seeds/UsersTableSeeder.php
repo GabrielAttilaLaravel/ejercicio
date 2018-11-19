@@ -1,6 +1,6 @@
 <?php
 
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -17,7 +17,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Gabriel',
             'last_name' => 'Moreno',
             'email' => 'gabrieljmorenot@gmail.com',
-            'password' => bcrypt('123123')
+            'password' => bcrypt('123123'),
+            'role_id' => 1
         ]);
 
         factory(User::class)->create([

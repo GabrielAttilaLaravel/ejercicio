@@ -1,4 +1,4 @@
-$( "#flag" ).click(function() {
+$( ".flag" ).click(function() {
     $("#content-flag").attr("style", "display:block!important");
 });
 
@@ -9,6 +9,7 @@ function selectedPrefix(obj){
 
     $("#content-flag").attr("style", "display:none!important");
 
-    document.getElementById("phone").value = '+'+prefix;
-    document.getElementById("flag").src = host+"/img/"+pais+".png";
+    document.getElementById("phone").value = prefix;
+    $(".flag img").attr("src", host+"/img/flags/"+pais+".png");
+    //document.getElementById("flag").src = host+"/img/flags/"+pais+".png";
 }

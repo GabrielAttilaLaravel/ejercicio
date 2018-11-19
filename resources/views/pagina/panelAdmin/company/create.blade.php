@@ -46,7 +46,7 @@
                                 <div class="form-row">
                                     <div class="col-md-1">
                                         <div class="flag mx-auto d-block">
-                                            <img id="flag" src="{{ asset('img/ve.png') }}">
+                                            <img src="{{ asset('img/flags/ve.png') }}">
                                             <i class="fas fa-caret-down"></i>
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
         </div>
 
         <div id="content-flag" class="content-flag d-flex">
-            <div class="list-flag mx-auto d-block justify-content-center align-self-center">
+            <div class="list-flag mx-auto d-block ">
                 <div class="col-md-12" style="padding: 8px 5px">
                     <img src="{{ asset('img/ve.png') }}" class="selected" style="margin-right: 10px; width: 24px; height: 16px">
                     <b style="padding-right: 20px">Venezuela</b>
@@ -81,13 +81,13 @@
                 </div>
 
                 <hr class="col-md-12" style="margin-top: 8px;margin-bottom: 8px;">
-                @for($a = 0 ; $a <= 50 ; $a++)
-                    <div onclick="selectedPrefix(this)" data-pais="cl" data-prefix-flag="{{ $a }}" class="col-md-12" style="padding: 4px 5px">
-                        <img src="{{ asset('img/cl.png') }}" style="margin-right: 10px; width: 24px; height: 16px">
-                        <b style="padding-right: 20px">Chile</b>
-                        <span>+56</span>
+                @foreach($data as $datum)
+                    <div onclick="selectedPrefix(this)" data-pais="{{ $datum->name_short }}" data-prefix-flag="{{ $datum->prefix }}" class="col-md-12" style="padding: 4px 5px">
+                        <img src="{{ asset($datum->nameF) }}" style="margin-right: 10px; width: 24px; height: 16px">
+                        <b style="padding-right: 20px">{{ $datum->nameP }}</b>
+                        <span>{{ $datum->prefix }}</span>
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     @endslot
@@ -103,6 +103,13 @@
         <script>
             $('.chosen-select').select2({
                 placeholder: "Select category"
+            });
+
+            $.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
+
+                var country = data.address.country;
+                //console.log('País de usuario: ' + country);
+
             });
         </script>
 
