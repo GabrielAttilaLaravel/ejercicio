@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'comments', 'namespace' => '\Comments'], function (){
+Route::group(['prefix' => 'comments', 'namespace' => 'Comments'], function (){
     Route::get('/approved', 'ApprovedController@approved')->name('admin_comments_approved');
     Route::get('/unapproved', 'UnapprovedController@unapproved')->name('admin_comments_unapproved');
     /*Route::get('/create', 'CreateController@create')->name('admin_comment_create');

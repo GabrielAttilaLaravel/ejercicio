@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'company', 'namespace' => '\Company'], function (){
+Route::group(['prefix' => 'company', 'namespace' => 'Company'], function (){
     //Route::get('/', 'IndexController@index')->name('admin_user_company_index');
     Route::get('/create', 'CreateController@create')->name('admin_company_create');
     /*

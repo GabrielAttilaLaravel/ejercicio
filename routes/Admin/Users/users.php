@@ -1,7 +1,7 @@
 <?php
 
 
-Route::group(['prefix' => 'users', 'namespace' => '\Users'], function (){
+Route::group(['prefix' => 'users', 'namespace' => 'Users'], function (){
     require __DIR__ . '/Perfil/perfil.php';
 
     Route::get('/', 'IndexController@index')->name('admin_users_index');

@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'article', 'namespace' => '\Article'], function (){
+Route::group(['prefix' => 'article', 'namespace' => 'Article'], function (){
     Route::get('/', 'IndexController@index')->name('admin_article_index');
     Route::get('/create', 'CreateController@create')->name('admin_article_create');
     /*
